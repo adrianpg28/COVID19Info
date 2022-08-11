@@ -1,0 +1,182 @@
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --accordion-color: #282828;
+    --title-color: #191919;
+    --active-color: #3e86d2;
+    --separator-color: #292c2d;
+    --white: #9b9b9b;
+    --red: #e74c3c;
+    --black: #000;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  label {
+    cursor: pointer;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  input[type="radio"] {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  body {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    padding: 50px 0;
+    font: 1rem/1.5 'Muli', sans-serif;
+  }
+  
+  
+  /* ACCORDION
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .accordion {
+    position: relative;
+    width: calc(100% - 20px);
+    max-width: 800px;
+    min-height: 380px;
+    margin: 0 auto;
+    background: var(--accordion-color);
+    color: var(--white);
+  }
+  
+  .accordion::before {
+    content: 'Source: Wikipedia';
+    position: absolute;
+    right: 0;
+    top: -20px;
+    font-size: 0.8rem;
+    color: var(--black);
+  }
+  
+  .accordion label {
+    text-align: center;
+  }
+  
+  .accordion,
+  .accordion li,
+  .accordion .accordion-title {
+    display: flex;
+  }
+  
+  .accordion li:not(:last-child) {
+    border: 1px solid var(--separator-color);
+  }
+  
+  .accordion .accordion-title {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    line-height: normal;
+    padding: 20px 10px;
+    background: var(--title-color);
+    transition: color 0.1s;
+  }
+  
+  .accordion .accordion-title:hover {
+    color: var(--active-color);
+  }
+  
+  .accordion .accordion-heading {
+    display: inline-block;
+    white-space: nowrap;
+    transform-origin: bottom;
+    transform: rotate(-90deg) translate(50%, 50%);
+  }
+  
+  .accordion .accordion-content {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+    padding: 20px;
+  }
+  
+  [value="Animal"]:checked ~ .accordion [data-radio="animal"],
+  [value="Plant"]:checked ~ .accordion [data-radio="plant"],
+  [value="Space"]:checked ~ .accordion [data-radio="space"],
+  [value="River"]:checked ~ .accordion [data-radio="river"] {
+    flex-grow: 1;
+  }
+  
+  [value="Animal"]:checked ~ .accordion [for="animal"] + .accordion-content,
+  [value="Plant"]:checked ~ .accordion [for="plant"] + .accordion-content,
+  [value="Space"]:checked ~ .accordion [for="space"] + .accordion-content,
+  [value="River"]:checked ~ .accordion [for="river"] + .accordion-content {
+    display: flex;
+  }
+  
+  [value="Animal"]:checked ~ .accordion [for="animal"],
+  [value="Plant"]:checked ~ .accordion [for="plant"],
+  [value="Space"]:checked ~ .accordion [for="space"],
+  [value="River"]:checked ~ .accordion [for="river"] {
+    color: var(--active-color);
+  }
+  
+  /*[value="Animal"]:focus ~ .accordion [for="animal"],
+  [value="Plant"]:focus ~ .accordion [for="plant"],
+  [value="Space"]:focus ~ .accordion [for="space"],
+  [value="River"]:focus ~ .accordion [for="river"] {
+    outline: 1px solid var(--active-color);
+  }*/
+  
+  
+  /* MQ
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  @media screen and (max-width: 650px) {
+    .accordion {
+      min-height: 0;  
+    }
+    
+    .accordion,
+    .accordion li {
+      flex-direction: column;
+    }
+    
+    .accordion .accordion-title {
+      flex-direction: row;
+      width: auto;
+    }
+    
+    .accordion .accordion-heading {
+      transform: none;
+    }
+    
+    .accordion .accordion-title,
+    .accordion .accordion-content {
+      padding: 20px;
+    }
+  }
+  
+  
+  /* FOOTER
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .page-footer {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    font-size: 1rem;
+    color: var(--black);
+  }
+  
+  .page-footer span {
+    color: var(--red);
+  }

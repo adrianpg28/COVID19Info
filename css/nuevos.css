@@ -1,0 +1,173 @@
+.highcharts-figure, .highcharts-data-table table {
+    min-width: 310px; 
+    max-width: 950px;
+    margin: 1em auto;
+}
+
+.sidebar-wrapper{
+
+    border: 0px;
+}
+    
+    .ccchh{
+        color:#66615B;
+        text-align: center;
+
+    }
+    
+    .gStiUT {
+            color: rgb(0, 165, 0);
+            font-weight: 200;
+            font-size: 18px;
+        }
+    .gStiUTT {
+        color: rgb(255, 120, 143);
+        font-weight: 200;
+        font-size: 18px;
+    }
+    .gStiUTTT {
+        color: rgb(251, 198, 88);
+        font-weight: 200;
+        font-size: 18px;
+    }
+    .dvsSCz {
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        padding: 5px;
+        border-radius: 10px;
+        font-family: GothamPro;
+        font-weight: 100;
+        font-size: 18px;
+    }
+    .ceqzCR {
+        text-align: center;
+        line-height: 1.25em;
+        margin: 10px;
+        font-size: 18px;
+        
+    }
+    .fRamGM {
+        color: rgb(255, 120, 143);
+        font-weight: 400;
+        text-align: center;
+        font-size: 30px;
+        font-size: 25px;
+        margin: 12px;
+    }
+
+
+    .contenedor-bot{
+        grid-template-rows: repeat(8, 1fr);
+        grid-auto-columns: 1fr;
+        grid-auto-flow: column;
+        display: grid;
+        grid-template-columns: 1fr;
+        font-family: GothamPro;
+        font-weight: 100;
+        font-size: 18px;
+
+    }
+    .botonoes-selec{
+        position: relative;
+        font-family: GothamPro;
+        font-weight: 100;
+        font-size: 15px;
+        display: block;
+        
+    }
+    a{
+        text-decoration: none;
+        }
+    .boton {
+        position: relative;
+        display: flex;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px;
+        color: rgb(107, 107, 107);
+        font-size: 1em;
+        font-weight: 200;
+        margin: 5px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: all 0.3s ease-in-out 0s;
+                    
+        }
+    .boton:hover {
+        background: linear-gradient(to right, white 50%, rgb(91, 120, 255) 50%) right bottom / 201% 100%;
+        background-image: linear-gradient(to right, white 50%, rgb(91, 120, 255) 50%);
+        color:white;
+        text-decoration: none;
+        
+        }
+
+        .accordion {
+            background-color: #ffffff;
+            color: rgb(107, 107, 107);
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            border-radius: 5px;
+            font-size: 15px;
+            
+          }
+          
+          /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+           .active,.accordion:hover {
+            background: linear-gradient(to right, white 50%, rgb(91, 120, 255) 50%) right bottom / 201% 100%;
+            background-image: linear-gradient(to right, white 50%, rgb(91, 120, 255) 50%);
+            color:white;
+            text-decoration: none;
+            border: none;
+           }
+           .accordion:focus {
+            border: none;
+            outline: none;
+        }
+          
+          /* Style the accordion panel. Note: hidden by default */
+          .panel {
+            padding: 0 10px;
+            background: #f4f3ef;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.2s ease-out;
+            
+          }
+          .accordion:after {
+            content: '\02795'; /* Unicode character for "plus" sign (+) */
+            font-size: 11px;
+            color: #ffff;
+            float: right;
+            margin-left: 5px;
+            border: 0px;
+            
+          }
+          
+          .active:after {
+            content: "\2796"; /* Unicode character for "minus" sign (-) */
+            
+          }
+
+          .sidebar-wrapper::-webkit-scrollbar {
+            width: 1px;     /* Tamaño del scroll en vertical */
+            height: 1px;    /* Tamaño del scroll en horizontal */
+            display: hidden;  /* Ocultar scroll */
+        }
+
+    
